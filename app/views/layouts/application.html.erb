@@ -14,14 +14,19 @@
         <div class="background black">
         </div>
         <a href="#!user"><img class="circle" src=""></a>
-        <a href="#!name"><span class="white-text name"><%= current_user.name %></span></a>
-        <a href="#!email"><span class="white-text email"><%= current_user.email %></span></a>
+        <h5> <%= current_user.name %> </h5>
+        <h6> <%= current_user.email %></h6>
+        <br>
       </div></li>
-      <li><a href="#!"><i class="material-icons">cloud</i>First Link With Icon</a></li>
-      <li><a href="#!">Second Link</a></li>
-      <li><div class="divider"></div></li>
-      <li><a class="subheader">Subheader</a></li>
-      <li><a class="waves-effect" href="#!">Third Link With Waves</a></li>
+        <div class="row">
+          <div class="container">
+            <li><h6>Idade: 20</li>
+            <li><h6>Telefone: 27222222</li>
+            <li><div class="divider"></div></li>
+            <li><h6>Cidade: Campos dos Goytacazes</h6></li>
+            <li><h6>Estado: RJ</h6></li>
+          </div>
+        </div>
       </ul>
       <a href="#" data-activates="slide-out" class="button-collapse"><i class="material-icons">menu</i></a>
     <% end %>
