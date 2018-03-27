@@ -1,15 +1,21 @@
-<thead>
-  <tr>
-    <th><%= User.human_attribute_name(:name)%> | </th>
-    <th><%= User.human_attribute_name(:email)%></th>
-  </tr>
-</thead>
-<br>
-<tbody>
-  <% @users.each do |user| %>
-     <%= content_tag :tr, id: dom_id(user), class: dom_class(user) do %>
-        <td><%= user.name %> | </td>
-        <td><%= user.email %></td>
+<div class="body-content">
+  <thead>
+    <tr>
+      <th></th>
+      <th><%= User.human_attribute_name(:name)%> | </th>
+      <th><%= User.human_attribute_name(:email)%></th>
+    </tr>
+  </thead>
+  <br>
+  <tbody>
+    <% @users.each do |user| %>
+       <%= content_tag :tr, id: dom_id(user), class: dom_class(user) do %>
+          <td><%= link_to image_tag(user.avatar.url(:thumb), class: 'media-object'), user.avatar.url, target: '_blank' %></td>
+          <td><%= user.name %> | </td>
+          <td><%= user.email %></td>
+          <br>
+          <br>
+        <% end %>
       <% end %>
-    <% end %>
-  </tbody>
+    </tbody>
+</div>

@@ -1,0 +1,16 @@
+<div class="body-content">
+  <thead>
+    <tr>
+      <th></th>
+      <th><%= User.human_attribute_name(:name)%> | </th>
+      <th><%= User.human_attribute_name(:email)%></th>
+    </tr>
+  </thead>
+  <br>
+  <tbody>
+
+    <td><%= link_to image_tag(@user.avatar.url(:thumb), class: 'media-object'), @user.avatar.url, target: '_blank' %></td>
+    <td><%= @user.name %> | </td>
+    <td><%= @user.email %></td>
+  </tbody>
+</div>

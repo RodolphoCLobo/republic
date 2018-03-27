@@ -13,7 +13,11 @@
       <li><div class="user-view">
         <div class="background black">
         </div>
-        <a href="#!user"><img class="circle" src=""></a>
+        <% unless current_user.avatar_file_name.nil? %>
+          <%= link_to image_tag(current_user.avatar.url(:medium), class: 'media-object'), current_user.avatar.url, target: '_blank' %>
+        <% else %>
+          <%= link_to image_tag('missing-image-avatar.png') %>
+        <% end %>
         <h5> <%= current_user.name %> </h5>
         <h6> <%= current_user.email %></h6>
         <br>
