@@ -18,7 +18,9 @@
 //= require materialize
 //= require materialize-sprockets
 
-
+$(document).ready(function(){
+    $('.parallax').parallax();
+  });
 
 $(document).ready(function(){
   $(".button-collapse").sideNav();
