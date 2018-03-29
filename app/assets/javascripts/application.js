@@ -19,8 +19,12 @@
 //= require materialize-sprockets
 
 $(document).ready(function(){
-    $('.parallax').parallax();
-  });
+  $(".button-collapse-sidenav").sideNav();
+});
+
+$(document).ready(function(){
+  $('.parallax').parallax();
+});
 
 $(document).ready(function(){
   $(".button-collapse").sideNav();
@@ -31,7 +35,8 @@ $(document).ready(function(){
     data: {
       "Apple": null,
       "Microsoft": null,
-      "Google": 'https://placehold.it/250x250'
+      "Google": null,
+      "Campos dos Goytacazes": null,
     },
     limit: 20, // The max amount of results that can be shown at once. Default: Infinity.
     onAutocomplete: function(val) {

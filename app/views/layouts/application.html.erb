@@ -10,18 +10,18 @@
 
     <% if user_signed_in? %>
       <ul id="slide-out" class="side-nav">
-      <li><div class="user-view">
-        <div class="background black">
-        </div>
-        <% unless current_user.avatar_file_name.nil? %>
-          <%= link_to image_tag(current_user.avatar.url(:medium), class: 'media-object'), current_user.avatar.url, target: '_blank' %>
-        <% else %>
-          <%= link_to image_tag('missing-image-avatar.png') %>
-        <% end %>
-        <h5> <%= current_user.name %> </h5>
-        <h6> <%= current_user.email %></h6>
-        <br>
-      </div></li>
+        <li><div class="user-view">
+          <div class="background black">
+          </div>
+          <% unless current_user.avatar_file_name.nil? %>
+            <%= link_to image_tag(current_user.avatar.url(:medium), class: 'media-object'), current_user.avatar.url, target: '_blank' %>
+          <% else %>
+            <%= link_to image_tag('missing-image-avatar.png') %>
+          <% end %>
+          <h5> <%= current_user.name %> </h5>
+          <h6> <%= current_user.email %></h6>
+          <br>
+        </div></li>
         <div class="row">
           <div class="container">
             <li><h6>Idade: 20</li>
@@ -32,7 +32,21 @@
           </div>
         </div>
       </ul>
-      <a href="#" data-activates="slide-out" class="button-collapse"><i class="material-icons">menu</i></a>
+
+      <div class="navbar-fixed">
+        <nav>
+          <div class="nav-wrapper">
+            <a href="#" class="brand-logo button-collapse-sidenav" data-activates="slide-out"><i class="material-icons">menu</i></a>
+            <ul id="nav-mobile" class="right hide-on-med-and-down">
+              <li></li>
+              <li><a href="#">Ajuda</a></li>
+              <li><a href="#">Entrar</a></li>
+              <li><a href="#">Anuncie uma vaga</a></li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+
     <% end %>
   </head>
 

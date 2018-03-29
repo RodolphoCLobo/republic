@@ -43,4 +43,50 @@
 .parallax-container{
   height: 600px;
   width: 100%;
+  bottom: 15px;
+}
+
+.row .col.s6{
+  position: relative;
+  top: 200px;
+  right: 0px;
+  left: 325px;
+}
+
+.navbar-fixed {
+  bottom: 15px;
+}
+
+.sidenav-buttom{
+  bottom: 0px;
+}
+
+.nav-wrapper{
+  margin-left: 40px;
+  margin-right: 40px;
+  opacity: 0.5
+}
+
+#autocomplete-input{
+  height: 40px;
+  background-color: white;
+}
+
+#autocomplete-input:focus{
+  background-color: white;
+}
+
+i.material-icons{
+  top: 5px !important;
+}
+
+.form-title h5{
+  position: relative;
+  left: 165px;
+  color: white;
+  font-size: 35px
+}
+
+.card-icon{
+  text-align: center;
 }
