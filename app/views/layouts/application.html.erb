@@ -18,7 +18,7 @@
           <% else %>
             <%= link_to image_tag('missing-image-avatar.png') %>
           <% end %>
-          <h5> <%= current_user.name %> </h5>
+          <h5> <%= link_to current_user.name, edit_user_path(current_user), style: 'text-decoration: none; color: white' %> </h5>
           <h6> <%= current_user.email %></h6>
           <br>
         </div></li>
@@ -29,6 +29,7 @@
             <li><div class="divider"></div></li>
             <li><h6>Cidade: Campos dos Goytacazes</h6></li>
             <li><h6>Estado: RJ</h6></li>
+            <%= link_to('Sair', destroy_user_session_path, method: :delete) %>
           </div>
         </div>
       </ul>
