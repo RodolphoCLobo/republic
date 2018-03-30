@@ -13,17 +13,17 @@
   <% end %>
 
   <div class= 'tab-content'>
-    <div class="field">
+    <div class="field" style="padding: 2% 20% 23px 20%;">
       <%= f.label :avatar %><br />
       <%= f.file_field :avatar %>
     </div>
 
-    <div class="field">
+    <div class="field" style="padding: 0 20% 23px 20%;">
       <%= f.label :email %><br />
       <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
     </div>
 
-    <div class="field">
+    <div class="field" style="padding: 0 20% 23px 20%;">
       <%= f.label :password %>
       <% if @minimum_password_length %>
       <em>(<%= @minimum_password_length %> characters minimum)</em>
@@ -31,14 +31,14 @@
       <%= f.password_field :password, autocomplete: "off" %>
     </div>
 
-    <div class="field">
+    <div class="field" style="padding: 0 20% 23px 20%;">
       <%= f.label :password_confirmation %><br />
       <%= f.password_field :password_confirmation, autocomplete: "off" %>
     </div>
 
-    <div class="actions">
-      <%= f.submit "Registrar" %>
-      <%= link_to t(:back), users_path %>
+    <div class="actions" style="padding: 0 20% 23px 20%;">
+      <%= f.submit "Registrar", style: "background-color: #039be5; border-radius: 5px; width: 40%; color: white; height: 30px; margin-left: 10%;" %>
+      <%= link_to "<button style='background-color: #ff1a1a; border: 2px solid #ff1a1a; border-radius: 5px; color: white; height: 30px; width: 40%'>Voltar</button>".html_safe, users_path %>
     </div>
   </div>
 <% end %>

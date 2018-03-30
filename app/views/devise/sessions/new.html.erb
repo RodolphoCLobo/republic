@@ -2,7 +2,7 @@
   <h2 style="text-align: center;">Republic</h2>
   <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
   <br>
-    <div class="field" style="padding: 2% 20% 23px 20%;">
+    <div class="field-first" style="padding: 2% 20% 23px 20%;">
       <%= f.label :email %><br />
       <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
     </div>
