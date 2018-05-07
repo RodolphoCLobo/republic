@@ -1,31 +1,33 @@
-<div style="width: 50%; margin-left: 25%;border: 2px #e6e6e6 solid; border-radius: 2px;">
-  <h2 style="text-align: center;">Republic</h2>
-  <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-  <br>
-    <div class="field-first" style="padding: 2% 20% 23px 20%;">
-      <%= f.label :email %><br />
-      <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
-    </div>
-
-    <div class="field" style="padding: 0 20% 23px 20%;">
-      <%= f.label :senha %><br />
-      <%= f.password_field :password, autocomplete: "off" %>
-    </div>
-
-    <% if devise_mapping.rememberable? -%>
-      <div class="field" style="padding: 0 20% 23px 20%;">
-        <%= f.check_box :remember_me, before: "background-color: #039be5" %>
-        <%= f.label :lembrar %>
-      </div>
-    <% end -%>
+<div class='login-content'>
+  <div class="login-form">
+    <h2 style="text-align: center;">Republic</h2>
+    <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
     <br>
-    <div class="actions" style="padding: 0 20% 23px 20%;">
-      <%= f.submit "Log In", style: "background-color: #039be5; border-radius: 5px; width: 40%; color: white; height: 30px; margin-left: 30%;" %>
+      <div class="field-first" style="padding: 2% 20% 23px 20%;">
+        <%= f.label :email %><br />
+        <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+      </div>
+
+      <div class="field" style="padding: 0 20% 23px 20%;">
+        <%= f.label :senha %><br />
+        <%= f.password_field :password, autocomplete: "off" %>
+      </div>
+
+      <% if devise_mapping.rememberable? -%>
+        <div class="field" style="padding: 0 20% 23px 20%;">
+          <%= f.check_box :remember_me, before: "background-color: black;" %>
+          <%= f.label :lembrar %>
+        </div>
+      <% end -%>
+      <br>
+      <div class="actions" style="padding: 0 20% 23px 20%;">
+        <%= f.submit "Log In", style: "background-color: black; border-radius: 5px; width: 40%; color: white; height: 30px; margin-left: 30%;" %>
+      </div>
+    <% end %>
+    <div style="padding: 0 20% 23px 20%;">
+      <%= render "users/shared/links" %>
     </div>
-  <% end %>
-  <div style="padding: 0 20% 23px 20%;">
-    <%= render "users/shared/links" %>
+    <br>
   </div>
   <br>
 </div>
-<br>
