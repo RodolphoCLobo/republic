@@ -1,0 +1,67 @@
+<%= form_for [current_user, @house] do |f| %>
+  <% if house.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(house.errors.count, "error") %> prohibited this house from being saved:</h2>
+
+      <ul>
+      <% house.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class= 'tab-content'>
+    <div class="field" style="padding: 2% 20% 23px 20%;">
+      <%= f.label :title, "Título do Anúncio" %><br />
+      <%= f.text_field :title %>
+    </div>
+
+    <div class="field" style="padding: 2% 20% 23px 20%;">
+      <%= f.label :description, "Descrição" %><br />
+      <%= f.text_field :description %>
+    </div>
+    <div class="field" style="padding: 2% 20% 23px 20%;">
+      <%= f.label :rooms, "Número de Quartos" %><br />
+      <%= f.text_field :rooms %>
+    </div>
+    <div class="field" style="padding: 2% 20% 23px 20%;">
+      <%= f.label :vacancies, "Vagas Disponíveis" %><br />
+      <%= f.text_field :vacancies %>
+    </div>
+    <div class="field" style="padding: 2% 20% 23px 20%;">
+      <%= f.label :rent, "Mensalidade" %><br />
+      <%= f.text_field :rent %>
+    </div>
+    <div class="field" style="padding: 2% 20% 23px 20%;">
+      <%= f.label :active, "Anúncio Ativo?" %><br />
+      <%= f.text_field :active %>
+    </div>
+    <div class="field" style="padding: 2% 20% 23px 20%;">
+      <%= f.label :street, "Rua" %><br />
+      <%= f.text_field :street %>
+    </div>
+    <div class="field" style="padding: 2% 20% 23px 20%;">
+      <%= f.label :number, "Número" %><br />
+      <%= f.text_field :number %>
+    </div>
+    <div class="field" style="padding: 2% 20% 23px 20%;">
+      <%= f.label :neighborhood, "Bairro" %><br />
+      <%= f.text_field :neighborhood %>
+    </div>
+    <div class="field" style="padding: 2% 20% 23px 20%;">
+      <%= f.label :city, "Cidade" %><br />
+      <%= f.text_field :city %>
+    </div>
+    <div class="field" style="padding: 2% 20% 23px 20%;">
+      <%= f.label :state, "Estado" %><br />
+      <%= f.text_field :state %>
+    </div>
+
+
+    <div class="actions" style="padding: 0 20% 23px 20%;">
+      <%= f.submit "Anunciar", style: "background-color: #039be5; border-radius: 5px; width: 40%; color: white; height: 30px; margin-left: 10%;" %>
+      <%= link_to "<button style='background-color: #ff1a1a; border: 2px solid #ff1a1a; border-radius: 5px; color: white; height: 30px; width: 40%'>Voltar</button>".html_safe, user_houses_path %>
+    </div>
+  </div>
+<% end %>

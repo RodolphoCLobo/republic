@@ -1,0 +1,8 @@
+<p id="notice"><%= notice %></p>
+
+<% if request.original_url.include?('users') %>
+  <%= link_to 'Editar', edit_user_house_path(@house) %> |
+  <%= link_to 'Voltar', user_houses_path %>
+<% else %>
+  <%= link_to 'Voltar', houses_path %>
+<% end %>

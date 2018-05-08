@@ -29,6 +29,8 @@
             <li><div class="divider"></div></li>
             <li><h6>Cidade: Campos dos Goytacazes</h6></li>
             <li><h6>Estado: RJ</h6></li>
+            <%= link_to('Anuncie Uma Vaga', new_user_house_path(user_id: current_user.id), method: :get) %></br>
+            <%= link_to('Seus Anúncios', user_houses_path(user_id: current_user.id), method: :get) %></br>
             <%= link_to('Sair', destroy_user_session_path, method: :delete) %>
           </div>
         </div>

@@ -1,0 +1,32 @@
+<p id="notice"><%= notice %></p>
+<% if request.original_url.include?('users') %>
+  <h1> Seus Anúncios</h1>
+<% else %>
+  <h1>Repúblicas</h1>
+<% end %>
+
+<table>
+  <thead>
+    <tr>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @houses.each do |house| %>
+      <tr>
+        <td><%= link_to 'Show', house_url(id: house.id) %></td>
+        <% if request.original_url.include?('users') %>
+          <td><%= link_to 'Edit', edit_user_house_path(id: house.id) %></td>
+          <td><%= link_to 'Destroy', user_house_url(id: house.id), method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <% end %>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<% if request.original_url.include?('users') %>
+  <%= link_to 'Anunciar Republica', new_user_house_path %>
+<% end %>
