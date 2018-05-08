@@ -37,6 +37,10 @@ gem 'devise'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
+# Google Maps for Rails Views
+gem 'gmaps4rails'
+gem 'underscore-rails'
+
 gem "paperclip", "~> 6.0.0"
 
 group :development, :test do

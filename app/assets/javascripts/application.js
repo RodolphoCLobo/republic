@@ -18,6 +18,9 @@
 //= require materialize
 //= require materialize-sprockets
 
+//= require underscore
+//= require gmaps/google
+
 $(document).ready(function(){
   $(".button-collapse-sidenav").sideNav();
 });
