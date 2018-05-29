@@ -20,7 +20,7 @@
         <th>Vagas Disponíveis</th>
         <th>Aluguel</th>
         <th>Cidade</th>
-    <% @houses.each do |house| %>
+    <% @searched_houses.each do |house| %>
       <tr class="text-center">
         <td><%= link_to "#{house.title}", house_url(id: house.id) %></td>
         <td><%=house.vacancies %></td>

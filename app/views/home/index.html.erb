@@ -1,20 +1,21 @@
 
 <div class="parallax-container">
   <div class="parallax"><img class="image-parallax" src="/assets/home.jpg"></div>
-  <div class="row">
-    <div class="col s6">
+  <div class="row container">
+    <div class="form-itens col 12">
       <div class="form-title">
         <h5 >Onde deseja morar?</h5>
       </div>
-      <div class="nav-wrapper">
-        <form>
-          <div class="input-field">
-            <input id="autocomplete-input" type="search" class="autocomplete" required>
-            <label class="label-icon" for="search"><i class="material-icons">search</i></label>
-            <i class="material-icons">close</i>
-          </div>
-        </form>
-      </div>
+      <%= form_tag("/houses/search") do %>
+        <div class="col 6">
+          <input name='city' id="autocomplete-input" type="search" class="autocomplete" required></input>
+        </div>
+        <div class="col 6">
+          <button class="left waves-effect waves-light btn" id="search-button">
+            Buscar
+          </button>
+        </div>
+      <% end %>
     </div>
   </div>
 </div>

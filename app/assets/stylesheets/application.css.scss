@@ -51,7 +51,7 @@
   height: 70px;
 }
 
-.row .col.s6{
+.form-itens{
   position: relative;
   top: 200px;
   right: 0px;
@@ -69,7 +69,8 @@
 .nav-wrapper{
   margin-left: 40px;
   margin-right: 40px;
-  opacity: 0.5
+
+  width: 100%;
 }
 
 nav{
@@ -77,6 +78,7 @@ nav{
 }
 
 #autocomplete-input{
+  width: calc(100% - 2rem);
   height: 40px;
   background-color: white;
 }
@@ -85,13 +87,28 @@ nav{
   background-color: white;
 }
 
+.search-text{
+  opacity: 0.5;
+}
+
+.search-button{
+  height: 40px;
+
+  a{
+    color: white;
+    text-decoration: none;
+  }
+  a:hover{
+    background-color: #ffeb3b;
+
+  }
+}
+
 i.material-icons{
   top: 5px !important;
 }
 
 .form-title h5{
-  position: relative;
-  left: 165px;
   color: white;
   font-size: 35px
 }

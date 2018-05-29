@@ -2,6 +2,9 @@ Rails.application.routes.draw do
   devise_for :users, :path_prefix => 'dv'
   resources :users
   resources :houses, only: [:index, :show]
+  resource :houses, only: [:search] do
+    post 'search', to: 'home#search'
+  end
   resources :users do
     resources :houses do
       resources :tags, only: [:create, :index]

@@ -37,6 +37,8 @@ gem 'devise'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
+gem 'rack-cors'
+
 # Google Maps for Rails Views
 gem 'gmaps4rails'
 gem 'underscore-rails'
