@@ -31,7 +31,7 @@
 </div>
 <div class="container">
   <div class="row">
-    <div class="col s12 m4">
+    <a href="#" class="col s12 m4">
       <div class="card small">
         <div class="card-icon">
           <i class="large material-icons">home</i>
@@ -40,13 +40,10 @@
         <div class="card-content">
           <p>Encontre a república ideal para morar.</p>
         </div>
-        <div class="card-action">
-          <a href="#">Ver mais</a>
-        </div>
       </div>
-    </div>
+    </a>
 
-    <div class="col s12 m4">
+    <a href="#" class="col s12 m4">
       <div class="card small">
         <div class="card-icon">
           <i class="large material-icons">person_pin</i>
@@ -55,13 +52,10 @@
         <div class="card-content">
           <p>Preencha uma vaga na sua república. </p>
         </div>
-        <div class="card-action">
-          <a href="#">Ver mais</a>
-        </div>
       </div>
-    </div>
+    </a>
 
-    <div class="col s12 m4">
+    <a href="#" class="col s12 m4">
       <div class="card small">
         <div class="card-icon">
           <i class="large material-icons">chat</i>
@@ -70,11 +64,8 @@
         <div class="card-content">
           <p>Envie uma mensagem para nossos desenvolvedores.</p>
         </div>
-        <div class="card-action">
-          <a href="#">Ver mais</a>
-        </div>
       </div>
-    </div>
+    </a>
   </div>
 </div>
 
@@ -91,3 +82,21 @@
     <p class="grey-text text-darken-3 lighten-3">Parallax is an effect where the background content or image in this case, is moved at a different speed than the foreground content while scrolling.</p>
   </div>
 </div>
+
+
+<script type="text/javascript">
+  var handler = Gmaps.build('Google');
+  handler.buildMap({ internal: {id: 'geolocation'} }, function(){
+    // be aware chrome >= 50 requires https for geolocation to work
+    if(navigator.geolocation)
+      navigator.geolocation.getCurrentPosition(displayOnMap);
+  });
+
+  function displayOnMap(position){
+    var marker = handler.addMarker({
+      lat: position.coords.latitude,
+      lng: position.coords.longitude
+    });
+    handler.map.centerOn(marker);
+  };
+</script>

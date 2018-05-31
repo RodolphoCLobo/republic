@@ -1,0 +1,16 @@
+a.col.s12.m4 {
+    text-decoration: none; 
+    color: #333;
+
+    i.material-icons {
+        margin-top: 20%;
+    }
+}
+
+a.col.s12.m4:hover {
+    .card.small {
+        background: #333;
+        color: #fff;
+    }
+    background: transparent;
+}
