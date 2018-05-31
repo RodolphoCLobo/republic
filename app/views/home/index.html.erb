@@ -1,28 +1,29 @@
-
-<div class="parallax-container">
-  <div class="parallax"><img class="image-parallax" src="/assets/home.jpg"></div>
-  <div class="container">
-    <div class="row">
-      <div class="form-itens col 12">
-        <div class="form-title">
-          <h5 class="center-align">Onde deseja morar?</h5>
-        </div>
-        <%= form_tag("/houses/search") do %>
-          <div class="row">
-            <div class="col 6">
-              <input name='city' id="autocomplete-input" type="search" class="autocomplete z-depth-5" required></input>
-            </div>
-            <div class="col 6">
-              <button class="waves-effect waves-light btn" id="search-button">
-                Buscar
-              </button>
-            </div>
+<section id="search" class="section scrollspy">
+  <div class="parallax-container">
+    <div class="parallax"><img class="image-parallax" src="/assets/home.jpg"></div>
+    <div class="container">
+      <div class="row">
+        <div class="form-itens col 12">
+          <div class="form-title">
+            <h5 class="center-align">Onde deseja morar?</h5>
           </div>
-        <% end %>
+          <%= form_tag("/houses/search") do %>
+            <div class="row">
+              <div class="col 6">
+                <input name='city' id="autocomplete-input" type="search" class="autocomplete z-depth-5" required></input>
+              </div>
+              <div class="col 6">
+                <button class="waves-effect waves-light btn" id="search-button">
+                  Buscar
+                </button>
+              </div>
+            </div>
+          <% end %>
+        </div>
       </div>
     </div>
   </div>
-</div>
+</section>
 <div class="section white">
   <div class="container">
     <h2 class="header center">Encontre o que você procura</h2>
@@ -31,7 +32,7 @@
 </div>
 <div class="container">
   <div class="row">
-    <a href="#" class="col s12 m4">
+    <a href="#search" class="col s12 m4">
       <div class="card small">
         <div class="card-icon">
           <i class="large material-icons">home</i>
@@ -91,20 +92,3 @@
     </div>
   </div>
 </div>
-
-<script type="text/javascript">
-  var handler = Gmaps.build('Google');
-  handler.buildMap({ internal: {id: 'geolocation'} }, function(){
-    // be aware chrome >= 50 requires https for geolocation to work
-    if(navigator.geolocation)
-      navigator.geolocation.getCurrentPosition(displayOnMap);
-  });
-
-  function displayOnMap(position){
-    var marker = handler.addMarker({
-      lat: position.coords.latitude,
-      lng: position.coords.longitude
-    });
-    handler.map.centerOn(marker);
-  };
-</script>
