@@ -50,6 +50,10 @@ class UsersController < ApplicationController
     end
   end
 
+  def search_republic
+    redirect_to new_user_house_path(current_user.id)
+  end
+
   private
 
   def user_params

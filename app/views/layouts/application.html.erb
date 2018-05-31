@@ -37,11 +37,14 @@
           </div>
         </div>
       </ul>
+    <% end %>
 
       <div class="navbar-fixed">
         <nav>
           <div class="nav-wrapper">
-            <a href="#" class="brand-logo button-collapse-sidenav" data-activates="slide-out"><i class="material-icons">menu</i></a>
+            <% if user_signed_in? %>
+              <a href="#" class="brand-logo button-collapse-sidenav" data-activates="slide-out"><i class="material-icons">menu</i></a>
+            <% end %>
             <ul id="nav-mobile" class="right hide-on-med-and-down">
               <li></li>
               <li><a href="#">Ajuda</a></li>
@@ -51,8 +54,6 @@
           </div>
         </nav>
       </div>
-
-    <% end %>
   </head>
 
   <body>
