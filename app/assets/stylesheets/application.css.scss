@@ -68,6 +68,20 @@
   left: 250px;
 }
 
+.brand-logo{
+  color: white;
+
+  i{
+    position: relative;
+
+  }
+}
+
+.brand-logo:hover{
+  color: white;
+  background-color: rgba(26, 26, 26, 0.9);
+}
+
 .navbar-fixed {
   bottom: 15px;
 }
