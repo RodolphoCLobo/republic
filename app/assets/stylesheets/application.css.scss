@@ -55,7 +55,7 @@
   position: relative;
   top: 200px;
   right: 0px;
-  left: 325px;
+  left: 250px;
 }
 
 .navbar-fixed {
@@ -78,8 +78,8 @@ nav{
 }
 
 #autocomplete-input{
-  width: calc(100% - 2rem);
-  height: 40px;
+  width: 340px;
+  height: 35px;
   background-color: white;
 }
 
@@ -91,15 +91,19 @@ nav{
   opacity: 0.5;
 }
 
-.search-button{
-  height: 40px;
+#search-button{
+  height: 35px;
+  background-color: #333;
+  position: relative;
+  right: 23px;
 
   a{
     color: white;
+    background-color: #333;
     text-decoration: none;
   }
   a:hover{
-    background-color: #ffeb3b;
+    background-color: #333;
 
   }
 }
