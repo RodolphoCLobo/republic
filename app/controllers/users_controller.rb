@@ -50,7 +50,7 @@ class UsersController < ApplicationController
     end
   end
 
-  def search_republic
+  def republic_announce
     redirect_to new_user_house_path(current_user.id)
   end
 

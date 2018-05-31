@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   resource :houses, only: [:search] do
     post 'search', to: 'home#search'
   end
-  get 'search_republic', to: 'users#search_republic'
+  get 'republic_announce', to: 'users#republic_announce'
   resources :users do
     resources :houses do
       resources :tags, only: [:create, :index]
