@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :feedbacks
   devise_for :users, :path_prefix => 'dv'
   resources :users
   resources :houses, only: [:index, :show]
